@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>退休年龄计算器</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>退休年龄计算器</h1>
+        <p>根据新的退休改革政策，选择您的出生年份、月份及职员类型，即可计算出您的退休年龄。</p>
+      </header>
+
+      <section class="form-section">
+        <div class="form-group">
+          <label for="year">出生年份</label>
+          <select id="year" class="form-control" aria-label="选择出生年份"></select>
+        </div>
+
+        <div class="form-group">
+          <label for="month">出生月份</label>
+          <select id="month" class="form-control" aria-label="选择出生月份"></select>
+        </div>
+
+        <div class="form-group">
+          <label for="type">职员类型</label>
+          <select id="type" class="form-control" aria-label="选择职员类型">
+            <option value="1">男职员</option>
+            <option value="2">女职员（55岁退休）</option>
+            <option value="3">女职员（50岁退休）</option>
+          </select>
+        </div>
+
+        <div class="button-group">
+          <button id="submit" class="btn btn-primary" aria-label="计算退休年龄">计算</button>
+          <button id="reset" class="btn btn-secondary" aria-label="重置表单">重置</button>
+        </div>
+      </section>
+
+      <section class="result-section">
+        <h2>计算结果</h2>
+        <p>退休年龄：<span id="result">---</span></p>
+        <p>退休时间：<span id="result_time">---</span></p>
+        <p>延迟月数：<span id="result_month">---</span></p>
+      </section>
+
+      <script src="popup.js"></script>
+    </div>
+  </body>
+</html>
